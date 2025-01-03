@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Health
+  - Quiz
   layers:
   - Default
   - TransparentFX
@@ -11,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -43,6 +46,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3366669357
+    locked: 0
+  - name: UI
+    uniqueID: 2280835497
     locked: 0
   m_RenderingLayers:
   - Default
