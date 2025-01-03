@@ -3,12 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
   - 
@@ -43,6 +44,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3366669357
+    locked: 0
+  - name: UI
+    uniqueID: 2280835497
     locked: 0
   m_RenderingLayers:
   - Default
