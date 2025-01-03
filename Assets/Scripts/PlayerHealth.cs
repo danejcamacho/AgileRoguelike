@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject[] hearts;
 
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         for (int i = 0; i < hearts.Length; i++)
@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void Heal(int damage)
+    public void Heal(int damage)
     {
         health += damage;
 
@@ -62,6 +62,11 @@ public class PlayerHealth : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             TakeDamage(1);
+        }
+        if (collision.CompareTag("Health"))
+        {
+            Heal(2);
+            Destroy(collision.gameObject);
         }
 
     }
