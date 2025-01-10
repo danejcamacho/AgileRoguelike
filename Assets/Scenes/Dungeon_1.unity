@@ -1551,7 +1551,7 @@ MonoBehaviour:
   size: {x: 5, y: 5}
   startPos: 0
   rooms:
-  - room: {fileID: 7034178151636770951, guid: 40a72354fb686294391dcf4ff0b9fef6, type: 3}
+  - room: {fileID: 2646282198545115409, guid: 56aa36c1bea0f794896da062c74c2343, type: 3}
     minPosition: {x: 0, y: 0}
     maxPosition: {x: 0, y: 0}
     obligatory: 0
