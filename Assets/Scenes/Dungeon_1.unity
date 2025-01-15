@@ -2648,7 +2648,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 121782769771679051, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 121782769771679051, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: m_SortingLayerID

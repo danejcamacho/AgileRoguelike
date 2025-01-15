@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Quiz : MonoBehaviour
 {
-    public QuizSO quiz;
+    private QuizSO quiz;
     Canvas quizCanvas;
+
+    public QuizSO[] quizzes;
 
     void Start()
     {
@@ -13,6 +15,8 @@ public class Quiz : MonoBehaviour
 
     public void BeginQuiz()
     {
+        //choose a random quiz
+        quiz = quizzes[Random.Range(0, quizzes.Length)];
         quizCanvas.gameObject.SetActive(true);
         quizCanvas.GetComponent<QuizUI>().SetQuiz(quiz);
     }
