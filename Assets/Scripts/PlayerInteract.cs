@@ -20,10 +20,10 @@ public class PlayerInteract : MonoBehaviour
 
     void Update(){
         if (Input.GetKeyDown(KeyCode.E)){
-            down = Physics2D.Raycast(intdown.position, Vector2.down, 0.5f);
-            up = Physics2D.Raycast(intup.position, Vector2.up, 0.5f);
-            left = Physics2D.Raycast(intleft.position, Vector2.left, 0.5f);
-            right = Physics2D.Raycast(intright.position, Vector2.right, 0.5f);
+            down = Physics2D.Raycast(intdown.position, Vector2.down, 0.5f, LayerMask.GetMask("Interactable"));
+            up = Physics2D.Raycast(intup.position, Vector2.up, 0.5f, LayerMask.GetMask("Interactable"));
+            left = Physics2D.Raycast(intleft.position, Vector2.left, 0.5f, LayerMask.GetMask("Interactable"));
+            right = Physics2D.Raycast(intright.position, Vector2.right, 0.5f, LayerMask.GetMask("Interactable"));
             Debug.Log("E pressed");
             if (down.collider != null){
                 RunInteract(down.collider.gameObject);

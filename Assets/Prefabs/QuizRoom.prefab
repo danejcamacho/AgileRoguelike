@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5404363719424814303
+--- !u!1 &3814024731274564676
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7629990736365955383}
-  - component: {fileID: 8220792801188634678}
-  - component: {fileID: 9147035109367431292}
-  - component: {fileID: 7475761529669124773}
+  - component: {fileID: 2283084268653120602}
+  - component: {fileID: 894961041972916590}
+  - component: {fileID: 1475497647822070594}
+  - component: {fileID: 3078047857883274751}
+  - component: {fileID: 6674563098576337637}
   m_Layer: 6
-  m_Name: QuizGiver
+  m_Name: QuizMachine1_0
   m_TagString: Quiz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7629990736365955383
+--- !u!4 &2283084268653120602
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5404363719424814303}
+  m_GameObject: {fileID: 3814024731274564676}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11402321, y: 0.44935024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2563618094746901830}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8220792801188634678
+--- !u!212 &894961041972916590
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5404363719424814303}
+  m_GameObject: {fileID: 3814024731274564676}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,37 +79,62 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 6808924733773250493, guid: a890b993dc2090e4ea9328962dad123f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.4633334, y: 1.63}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9147035109367431292
+--- !u!95 &1475497647822070594
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3814024731274564676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b06c996285133e24d86954898cfd55cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3078047857883274751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5404363719424814303}
+  m_GameObject: {fileID: 3814024731274564676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 699f35fa83815344dac43d9a7750e092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quiz: {fileID: 11400000, guid: 78dc817e42ae7bd4591fa82f51ec1830, type: 2}
---- !u!61 &7475761529669124773
+  quizzes:
+  - {fileID: 11400000, guid: ea27b5660607c854d82d43b538d6b00c, type: 2}
+  - {fileID: 11400000, guid: 4aaefd3f42661e344b50692aa9d49e02, type: 2}
+  - {fileID: 11400000, guid: 603f6f904a89c71458503ec7c7e33b8b, type: 2}
+--- !u!61 &6674563098576337637
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5404363719424814303}
+  m_GameObject: {fileID: 3814024731274564676}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -140,13 +166,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 1.4633334, y: 1.63}
+    newSize: {x: 1.4633334, y: 1.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.4633334, y: 1.63}
   m_EdgeRadius: 0
 --- !u!1001 &5295033154404532229
 PrefabInstance:
@@ -237,7 +263,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7703532002671451459, guid: 40a72354fb686294391dcf4ff0b9fef6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7629990736365955383}
+      addedObject: {fileID: 2283084268653120602}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a72354fb686294391dcf4ff0b9fef6, type: 3}
 --- !u!4 &2563618094746901830 stripped
