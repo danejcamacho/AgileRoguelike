@@ -2,30 +2,23 @@ using System;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour{
-    public Transform player;
-    private Rigidbody2D rb;
-    private Vector2 movement;
-    public float moveSpeed = 10f;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() {
-        rb = this.GetComponent<Rigidbody2D>();
-        
+    //an enemy class that moves towards the player
+    public float speed = 4f;
+    private Transform player;
+    private Vector2 direction;
+    private Rigidbody2D rb2D;
+    private void Start(){
+        player = GameObject.Find("Player").transform;
+        rb2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update() { 
-        Vector3 direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
-        direction.Normalize();
-        movement = direction;        
+    private void Update(){
+        direction = (player.position - transform.position).normalized;
     }
-    private void FixedUpdate() {
-        moveCharacter(movement);
-        
+
+    private void FixedUpdate(){
+        rb2D.linearVelocity = direction * speed;
     }
-    void moveCharacter(Vector2 direction) {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
-    }
+
+
 }

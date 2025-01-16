@@ -59,16 +59,18 @@ public class PlayerHealth : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
-        {
-            TakeDamage(1);
-        }
         if (collision.CompareTag("Health"))
         {
             Heal(2);
             Destroy(collision.gameObject);
         }
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.CompareTag("Enemy")){
+            TakeDamage(1);
+        }
     }
 
 }

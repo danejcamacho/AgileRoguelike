@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8958e3775684da1449dc0943b6024cb8, type: 3}
   m_Name: Q3
   m_EditorClassIdentifier: 
-  question: . Scrum's distinctive emphasis among the methods is its strong promotion
+  question: Scrum's distinctive emphasis among the methods NOT is its strong promotion
     of ...
   answers:
   - self-directed teams

@@ -12,6 +12,12 @@ public class RoomBehavior : MonoBehaviour
     bool noEnemyFlag = true;
     bool[] status = new bool[4];
 
+    private void Awake() {
+        foreach(GameObject enemy in enemies){
+           enemy.GetComponent<Enemy>().enabled = false;
+        }
+    }
+
     private void Update() {
         foreach(GameObject enemy in enemies){
             noEnemyFlag = true;
@@ -25,9 +31,9 @@ public class RoomBehavior : MonoBehaviour
             enemiesInRoom = false;
         }
 
-
         if (playerInRoom && enemiesInRoom) {
             lockedDoors.SetActive(true);
+
         } else {
             lockedDoors.SetActive(false);
         }
@@ -46,6 +52,12 @@ public class RoomBehavior : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRoom = true;
+            foreach(GameObject enemy in enemies){
+                if (enemy != null){
+                    enemy.GetComponent<Enemy>().enabled = true;
+                }
+
+            }
         }
     }
 }
