@@ -37,6 +37,6 @@ public class QuizUI : MonoBehaviour
             playerHealth.TakeDamage(2);
         }
         Time.timeScale = 1;
-        gameObject.SetActive(false);
+        gameObject.GetComponent<Canvas>().enabled = false;
     }
 }

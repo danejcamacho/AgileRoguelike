@@ -90,8 +90,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2654002319569520521, guid: d942c8ef5c0152e4a99ef0a48f8222c2, type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654002319569520521, guid: d942c8ef5c0152e4a99ef0a48f8222c2, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654002319569520521, guid: d942c8ef5c0152e4a99ef0a48f8222c2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3873937112149031452, guid: d942c8ef5c0152e4a99ef0a48f8222c2, type: 3}
       propertyPath: m_Name

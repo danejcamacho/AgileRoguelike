@@ -940,19 +940,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 5, y: 5}
-  startPos: 0
+  startPos: 2
+  playerStartPosition: {x: 2, y: 2}
   rooms:
-  - room: {fileID: 7384292430708802079, guid: 84540d647fa1deb48998f8c648cd4ebc, type: 3}
-    minPosition: {x: 0, y: 0}
-    maxPosition: {x: 0, y: 0}
-    obligatory: 0
-  - room: {fileID: 2946998317515366530, guid: e6a73f3c1342cb447813d62045023297, type: 3}
-    minPosition: {x: 0, y: 0}
-    maxPosition: {x: 0, y: 0}
+  - room: {fileID: 4970766979765863455, guid: 417d75913ec81384daed8b51361047ce, type: 3}
+    minPosition: {x: 2, y: 2}
+    maxPosition: {x: 2, y: 2}
+    isStartRoom: 1
     obligatory: 1
   - room: {fileID: 7384292430708802079, guid: 84540d647fa1deb48998f8c648cd4ebc, type: 3}
     minPosition: {x: 0, y: 0}
-    maxPosition: {x: 0, y: 0}
+    maxPosition: {x: 4, y: 4}
+    isStartRoom: 0
+    obligatory: 0
+  - room: {fileID: 2946998317515366530, guid: e6a73f3c1342cb447813d62045023297, type: 3}
+    minPosition: {x: 3, y: 3}
+    maxPosition: {x: 3, y: 3}
+    isStartRoom: 0
+    obligatory: 1
+  - room: {fileID: 7131253497484627617, guid: 00302fbbf564b0a4fac8365f31fd62f6, type: 3}
+    minPosition: {x: 4, y: 4}
+    maxPosition: {x: 4, y: 4}
+    isStartRoom: 0
     obligatory: 1
   offset: {x: 14, y: 8.78}
 --- !u!4 &1621126182
@@ -1716,6 +1725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1412719821963071830, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1587146152487361229, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -1818,7 +1831,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3857539306175688752, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: bulletSpeed
-      value: 20
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857539306175688752, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
+      propertyPath: bulletOnePrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857539306175688752, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
+      propertyPath: bulletZeroPrefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4381739043641668751, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: m_IsActive
@@ -1836,13 +1857,17 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0.05099681
       objectReference: {fileID: 0}
-    - target: {fileID: 5388701550434800334, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
-      propertyPath: m_LocalPosition.x
+    - target: {fileID: 5018900209359705957, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5388701550434800334, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388701550434800334, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 5388701550434800334, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1988,7 +2013,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3857539306175688752, guid: 8b31d9579fa9dac4ba8632dcc058127c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

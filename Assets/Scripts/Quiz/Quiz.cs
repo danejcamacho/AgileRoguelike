@@ -10,14 +10,15 @@ public class Quiz : MonoBehaviour
     void Start()
     {
         quizCanvas = GameObject.Find("QuizCanvas").GetComponent<Canvas>();
-        quizCanvas.gameObject.SetActive(false);
+        quizCanvas.enabled = false;
     }
 
     public void BeginQuiz()
     {
+
         //choose a random quiz
         quiz = quizzes[Random.Range(0, quizzes.Length)];
-        quizCanvas.gameObject.SetActive(true);
+        quizCanvas.enabled = true;
         quizCanvas.GetComponent<QuizUI>().SetQuiz(quiz);
     }
 }
